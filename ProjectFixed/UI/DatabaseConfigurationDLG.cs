@@ -104,7 +104,7 @@ namespace ProjectFixed
 
         private void _btnLocal_Click(object sender, EventArgs e)
         {
-            _txtServer.Text = "localhost\\SQLEXPRESS";
+            _txtServer.Text = "localhost";
         }
         #endregion
     }

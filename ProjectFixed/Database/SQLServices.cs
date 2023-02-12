@@ -45,6 +45,10 @@ namespace ProjectFixed.Database
                     connectionParameters = (ConnectionParameters)serializer.Deserialize(sr);
                 }
                 System.Diagnostics.Debug.Print(connectionParameters.DatabaseName + " : " + connectionParameters.ServerName);
+                if (!CheckDatabase(connectionParameters.ServerName,connectionParameters.DatabaseName))
+                {
+                    s_invalidData = true;
+                }
             }
             catch(Exception ex)
             {
